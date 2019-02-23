@@ -13,7 +13,7 @@ Linux/Unix/MacOS: Python
 
 ### Installazione
 
-Copiare nella cartella che contiene il file csv mg3.py oppure mg3.exe
+Copiare nella cartella che contiene il file csv gmn26.py oppure gmn26.exe
 
 
 ## Scritto e compilato con
