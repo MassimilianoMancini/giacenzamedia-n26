@@ -27,8 +27,9 @@ Ogni contributo è ben accetto
 
 ## Versioning
 
-Per i numeri di versione, utilizzo [SemVer](http://semver.org/).
-Per l'elenco delle [versioni disponibili](https://github.com/massicode/giacenzamedia-n26/tags)
+Per i numeri di versione, utilizzo [SemVer](http://semver.org/)
+
+Qui ci sono le [versioni disponibili](https://github.com/massicode/giacenzamedia-n26/tags)
 
 ## Authors
 
