@@ -36,5 +36,5 @@ Per l'elenco delle versioni disponibili [tags on this repository](https://github
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Questo progetto è rilasciato con licenza MIT (https://opensource.org/licenses/MIT)
 
