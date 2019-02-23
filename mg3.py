@@ -1,13 +1,52 @@
 import csv
 import datetime
+import os
 
 # Settings
 filename = 'n26-csv-transactions.csv'
 totalBalance = 0
-initialDate = '2018-03-28'
-endDate =  '2019-02-20'
+initialDate = ''
+endDate =  ''
 header = True
 showDetails = False
+
+filename = input('Nome del file [n26-csv-transactions.csv]: ')
+if filename == '':
+    filename = 'n26-csv-transactions.csv'
+
+h = input ('Prima riga con intestazioni [S]: ')
+header = (h == 'S' or h == 's' or h == '')
+    
+tb = input('Saldo iniziale [0]: ')
+if tb == '':
+    totalBalance = 0
+else:
+    totalBalance = int(tb)
+
+id1 =  str(datetime.datetime.now().year - 1) + '-01-01'
+id = input ('Data iniziale [' + id1 + ']: ' )
+if id == '':
+    initialDate = id1
+else:
+    try:
+        datetime.datetime.strptime(id, '%Y-%m-%d')
+    except ValueError:
+        raise ValueError("Inserire la data nel formato YYYY-MM-DD")
+    initialDate = id
+
+ed1 = str(datetime.datetime.now().year - 1) + '-12-31'
+ed = input ('Data finale [' + ed1 + ']: ' )
+if ed == '':
+    endDate = ed1
+else:
+    try:
+        datetime.datetime.strptime(ed, '%Y-%m-%d')
+    except ValueError:
+        raise ValueError("Inserire la data nel formato YYYY-MM-DD")
+    endDate = ed
+
+d = input ('Mostra i dettagli dei movimenti [S]: ')
+showDetails = (d == 'S' or d == 's' or d == '')
 
 
 file = open(filename)
@@ -24,6 +63,12 @@ for row in csv:
 
     if header:
         header = False
+        continue
+
+    if row[0] > endDate:
+        break
+
+    if row[0] < initialDate:
         continue
 
     if date == row[0]:
