@@ -108,3 +108,7 @@ print ("totale numeri: %.3f giorni: %d" % (totalNum, totalDays))
 print ("-----")
 
 print("Giacenza media: %.2f" % (totalNum/totalDays))
+
+print ("-----")
+
+input ('Premi invio per chiudere')
