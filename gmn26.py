@@ -21,7 +21,7 @@ tb = input('Saldo iniziale [0]: ')
 if tb == '':
     totalBalance = 0
 else:
-    totalBalance = int(tb)
+    totalBalance = float(tb)
 
 id1 =  str(datetime.datetime.now().year - 1) + '-01-01'
 id = input ('Data iniziale [' + id1 + ']: ' )
@@ -34,7 +34,7 @@ else:
         raise ValueError("Inserire la data nel formato YYYY-MM-DD")
     initialDate = id
 
-ed1 = str(datetime.datetime.now().year - 1) + '-12-31'
+ed1 = str(datetime.datetime.now().year ) + '-1-1'
 ed = input ('Data finale [' + ed1 + ']: ' )
 if ed == '':
     endDate = ed1
